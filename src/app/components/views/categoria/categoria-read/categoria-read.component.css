@@ -12,3 +12,25 @@
     font-size: 2rem;
     font-weight: 500;
 }
+
+button {
+    margin-bottom: .8rem;
+}
+
+.edit {
+    color: blue;
+}
+
+.delete {
+    color: red;
+    margin-left: .5rem;
+}
+
+.mat-header {
+    width: 6rem;
+}
+
+.livros {
+    color: burlywood;
+    margin-left: .6rem;
+}

@@ -19,13 +19,11 @@ export class CategoriaReadComponent {
 
   listarCategorias() {
     this.service.listarCategorias().subscribe((categoria) => {
-      this.categorias = categoria;
-      console.log(this.categorias);
-      
+      this.categorias = categoria;      
     })
   }
 
 
-  displayedColumns: string[] = ['id', 'nome', 'descricao', 'acoes'];
+  displayedColumns: string[] = ['id', 'nome', 'descricao', 'livros', 'acoes'];
 
 }

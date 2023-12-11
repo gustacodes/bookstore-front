@@ -7,6 +7,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NavModule } from './components/template/nav/nav.module';
 import { HeaderModule } from './components/template/header/header.module';
 import { FooterModule } from './components/template/footer/footer.module';
+import { HomeModule } from './components/views/home/home.module';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { FooterModule } from './components/template/footer/footer.module';
     BrowserAnimationsModule,
     NavModule,
     HeaderModule,
-    FooterModule
+    FooterModule,
+    HomeModule
   ],
   providers: [],
   bootstrap: [AppComponent]

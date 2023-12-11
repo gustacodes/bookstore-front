@@ -4,6 +4,7 @@ import {MatSidenavModule} from '@angular/material/sidenav';
 import {MatListModule} from '@angular/material/list';
 import {MatIconModule} from '@angular/material/icon';
 import { NavComponent } from './nav.component';
+import { Router, RouterModule } from '@angular/router';
 
 @NgModule({
   declarations: [NavComponent],
@@ -12,7 +13,8 @@ import { NavComponent } from './nav.component';
     CommonModule,
     MatSidenavModule,
     MatListModule,
-    MatIconModule
+    MatIconModule,
+    RouterModule
   ],
 
   exports: [NavComponent]

@@ -8,6 +8,7 @@ import { NavModule } from './components/template/nav/nav.module';
 import { HeaderModule } from './components/template/header/header.module';
 import { FooterModule } from './components/template/footer/footer.module';
 import { HomeModule } from './components/views/home/home.module';
+import { CategoriaReadModule } from './components/views/categoria/categoria-read/categoria-read.module';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { HomeModule } from './components/views/home/home.module';
     NavModule,
     HeaderModule,
     FooterModule,
-    HomeModule
+    HomeModule,
+    CategoriaReadModule
   ],
   providers: [],
   bootstrap: [AppComponent]

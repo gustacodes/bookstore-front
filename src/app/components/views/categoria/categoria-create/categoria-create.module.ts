@@ -4,6 +4,8 @@ import { CategoriaCreateComponent } from './categoria-create.component';
 import {MatInputModule} from '@angular/material/input';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatButtonModule} from '@angular/material/button';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import {MatSnackBarModule} from '@angular/material/snack-bar';
 
 @NgModule({
   declarations: [CategoriaCreateComponent],
@@ -11,7 +13,10 @@ import {MatButtonModule} from '@angular/material/button';
     CommonModule,
     MatInputModule,
     MatFormFieldModule,
-    MatButtonModule
+    MatButtonModule,
+    FormsModule,
+    ReactiveFormsModule,
+    MatSnackBarModule
   ]
 })
 export class CategoriaCreateModule { }

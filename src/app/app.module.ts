@@ -10,7 +10,6 @@ import { FooterModule } from './components/template/footer/footer.module';
 import { HomeModule } from './components/views/home/home.module';
 import { CategoriaReadModule } from './components/views/categoria/categoria-read/categoria-read.module';
 import { CategoriaCreateModule } from './components/views/categoria/categoria-create/categoria-create.module';
-import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -26,8 +25,6 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     HomeModule,
     CategoriaReadModule,
     CategoriaCreateModule,
-    FormsModule,
-    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

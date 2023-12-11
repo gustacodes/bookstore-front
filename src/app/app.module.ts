@@ -11,6 +11,7 @@ import { HomeModule } from './components/views/home/home.module';
 import { CategoriaReadModule } from './components/views/categoria/categoria-read/categoria-read.module';
 import { CategoriaCreateModule } from './components/views/categoria/categoria-create/categoria-create.module';
 import { CategoriaDeleteModule } from './components/views/categoria/categoria-delete/categoria-delete.module';
+import { CategoriaUpdateModule } from './components/views/categoria/categoria-update/categoria-update.module';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { CategoriaDeleteModule } from './components/views/categoria/categoria-de
     HomeModule,
     CategoriaReadModule,
     CategoriaCreateModule,
-    CategoriaDeleteModule
+    CategoriaDeleteModule,
+    CategoriaUpdateModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -23,6 +23,13 @@ export class CategoriaService {
     return this.http.post<Categoria>(`${this.URL}/categorias`, categoria)
   }
 
+  findById(id: String): Observable<Categoria> {
+    return this.http.get<Categoria>(`${this.URL}/categorias/${id}`)
+  }
+
+  deletarCategoria(id: String): Observable<void> {
+    return this.http.delete<void>(`${this.URL}/categorias/${id}`)
+  }
 
   mensagem(str: String): void {
     this._snack.open(`${str}`, 'OK', {

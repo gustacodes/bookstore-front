@@ -10,6 +10,7 @@ import { FooterModule } from './components/template/footer/footer.module';
 import { HomeModule } from './components/views/home/home.module';
 import { CategoriaReadModule } from './components/views/categoria/categoria-read/categoria-read.module';
 import { CategoriaCreateModule } from './components/views/categoria/categoria-create/categoria-create.module';
+import { CategoriaDeleteModule } from './components/views/categoria/categoria-delete/categoria-delete.module';
 
 @NgModule({
   declarations: [
@@ -25,6 +26,7 @@ import { CategoriaCreateModule } from './components/views/categoria/categoria-cr
     HomeModule,
     CategoriaReadModule,
     CategoriaCreateModule,
+    CategoriaDeleteModule
   ],
   providers: [],
   bootstrap: [AppComponent]

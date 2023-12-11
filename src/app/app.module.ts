@@ -9,6 +9,8 @@ import { HeaderModule } from './components/template/header/header.module';
 import { FooterModule } from './components/template/footer/footer.module';
 import { HomeModule } from './components/views/home/home.module';
 import { CategoriaReadModule } from './components/views/categoria/categoria-read/categoria-read.module';
+import { CategoriaCreateComponent } from './components/views/categoria/categoria-create/categoria-create.component';
+import { CategoriaCreateModule } from './components/views/categoria/categoria-create/categoria-create.module';
 
 @NgModule({
   declarations: [
@@ -22,7 +24,8 @@ import { CategoriaReadModule } from './components/views/categoria/categoria-read
     HeaderModule,
     FooterModule,
     HomeModule,
-    CategoriaReadModule
+    CategoriaReadModule,
+    CategoriaCreateModule
   ],
   providers: [],
   bootstrap: [AppComponent]

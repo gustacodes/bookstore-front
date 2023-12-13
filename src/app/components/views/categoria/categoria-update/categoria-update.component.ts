@@ -17,7 +17,6 @@ export class CategoriaUpdateComponent {
     descricao: ''
   }
 
-
   constructor(private service: CategoriaService, private forms: FormBuilder, private router: Router, private route: ActivatedRoute) {
     
   }

@@ -17,6 +17,7 @@ import { CategoriaUpdateModule } from './components/views/categoria/categoria-up
   declarations: [
     AppComponent,
   ],
+
   imports: [
     BrowserModule,
     AppRoutingModule,
@@ -30,7 +31,9 @@ import { CategoriaUpdateModule } from './components/views/categoria/categoria-up
     CategoriaDeleteModule,
     CategoriaUpdateModule
   ],
+  
   providers: [],
   bootstrap: [AppComponent]
 })
+
 export class AppModule { }

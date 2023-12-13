@@ -1,6 +1,8 @@
 import { Component } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
-import { Router } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
+import { CategoriaService } from '../categoria.service';
+import { Categoria } from '../categoria.model';
 
 @Component({
   selector: 'app-categoria-update',
@@ -9,21 +11,43 @@ import { Router } from '@angular/router';
 })
 export class CategoriaUpdateComponent {
 
-  formulario: FormGroup
-
-  constructor(private forms: FormBuilder, private router: Router) {
-    this.formulario = forms.group({
-      nome: [''],
-      descricao: ['']
-    })
+  categoria: Categoria = {
+    id: '',
+    nome: '',
+    descricao: ''
   }
 
-  atualizarCategoria() {
 
+  constructor(private service: CategoriaService, private forms: FormBuilder, private router: Router, private route: ActivatedRoute) {
+    
+  }
+
+  ngOnInit() {
+    this.categoria.id = this.route.snapshot.paramMap.get('id')!
+    this.findById();
+  }
+
+  updateCategoria() {
+    this.service.updateCategoria(this.categoria).subscribe((respota) => {
+      this.router.navigate(['categorias'])
+      this.service.mensagem('Categoria atualizada com sucesso!')
+    },
+    
+    err => {
+      this.service.mensagem('Verifique se todos os campos estão preenchidos.')
+      
+    })
   }
 
   cancel() {
     this.router.navigate(['categorias'])
+  }
+
+  findById() {
+    this.service.findById(this.categoria.id!).subscribe((resposta) => {
+      this.categoria.nome = resposta.nome
+      this.categoria.descricao = resposta.descricao
+    })
   }
 
 }

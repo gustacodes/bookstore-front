@@ -1,18 +1,18 @@
-<form [formGroup]="formulario" (ngSubmit)="atualizarCategoria()">
+<form>
     <h1>ATUALIZAR CATEGORIA</h1>
 
     <mat-form-field class="form">
         <mat-label>Nome</mat-label>
-        <input matInput formControlName="nome" placeholder="Ex: Computação" type="text">
+        <input matInput [(ngModel)]="categoria.nome" name="nome" placeholder="Ex: Computação" type="text">
     </mat-form-field>
 
     <mat-form-field class="form">
         <mat-label>Descrição</mat-label>
-        <textarea matInput formControlName="descricao" placeholder="Ex: Livros de Computação" type="text"></textarea>
+        <textarea matInput [(ngModel)]="categoria.descricao" name="descricao" placeholder="Ex: Livros de Computação" type="text"></textarea>
     </mat-form-field>
 
     <div class="buttons">
-        <button class="mat-elevation-z8" mat-stroked-button color="primary">Atualizar</button>
-        <button class="mat-elevation-z8" mat-stroked-button color="warn" (click)="cancel()">Cancelar</button>
+        <button class="mat-elevation-z8" mat-stroked-button color="primary" (click)="updateCategoria()">ATUALIZAR</button>
+        <button class="mat-elevation-z8" mat-stroked-button color="warn" (click)="cancel()">CANCELAR</button>
     </div>
 </form>

@@ -1,7 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
-import { enviroment } from 'src/app/enviroments/enviroment';
+import { enviroment } from 'src/enviroments/enviroment';
 import { Categoria } from './categoria.model';
 import { MatSnackBar } from '@angular/material/snack-bar';
 
@@ -29,6 +29,10 @@ export class CategoriaService {
 
   deletarCategoria(id: String): Observable<void> {
     return this.http.delete<void>(`${this.URL}/categorias/${id}`)
+  }
+
+  updateCategoria(categoria: Categoria): Observable<void> {
+    return this.http.put<void>(`${this.URL}/categorias/${categoria.id}`, categoria)
   }
 
   mensagem(str: String): void {

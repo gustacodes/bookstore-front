@@ -9,6 +9,7 @@ import { FormControl, Validators } from '@angular/forms';
   templateUrl: './livro-update.component.html',
   styleUrls: ['./livro-update.component.css']
 })
+
 export class LivroUpdateComponent {
 
   titulo = new FormControl('', Validators.minLength(3))
@@ -34,10 +35,8 @@ export class LivroUpdateComponent {
 
   findById() {
     this.service.findById(this.livro.id!).subscribe((resposta) => {
-      this.livro.titulo = resposta.titulo
-      this.livro.nomeAutor = resposta.nomeAutor
-      this.livro.texto = resposta.texto
-    })
+      this.livro = resposta
+    })  
   }
 
   atualizarLivro() {

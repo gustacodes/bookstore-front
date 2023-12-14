@@ -23,6 +23,14 @@ export class LivroService {
     return this.http.post<Livro>(`${this.URL}/livros?categoria=${id}`, livro)
   }
 
+  removerLivro(id: String) {
+    return this.http.delete(`${this.URL}/livros/${id}`)
+  }
+
+  findById(id: String): Observable<Livro> {
+    return this.http.get<Livro>(`${this.URL}/livros/${id}`)
+  }
+
   mensagem(str: String): void {
     this._snack.open(`${str}`, 'OK', {
       horizontalPosition: 'end',

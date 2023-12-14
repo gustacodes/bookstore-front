@@ -1,0 +1,24 @@
+<form>
+    <h1>REMOVER LIVRO</h1>
+
+    <mat-form-field class="form">
+        <mat-label>Titulo</mat-label>
+        <input matInput [(ngModel)]="livro.titulo" name="titulo" placeholder="Harry Potter" type="text" disabled>
+        
+    </mat-form-field>
+
+    <mat-form-field class="form">
+        <mat-label>Autor</mat-label>
+        <input matInput [(ngModel)]="livro.nomeAutor" name="nomeAutor" placeholder="J.K Rowling" type="text" disabled>
+    </mat-form-field>
+
+    <mat-form-field class="form">
+        <mat-label>Texto</mat-label>
+        <textarea matInput [(ngModel)]="livro.texto" name="texto" placeholder="Descreva o livro" type="text" disabled></textarea>
+    </mat-form-field>
+
+    <div class="buttons">
+        <button  class="mat-elevation-z8" mat-stroked-button color="primary" (click)="removerLivro()">REMOVER</button>
+        <button class="mat-elevation-z8" mat-stroked-button color="warn" (click)="cancel()">CANCELAR</button>
+    </div>
+</form>

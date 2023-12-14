@@ -33,8 +33,7 @@ export class CategoriaUpdateComponent {
     },
     
     err => {
-      this.service.mensagem('Verifique se todos os campos estão preenchidos.')
-      
+      this.service.mensagem('Verifique se todos os campos estão preenchidos.')      
     })
   }
 

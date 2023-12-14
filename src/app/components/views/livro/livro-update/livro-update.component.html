@@ -1,0 +1,26 @@
+<form (ngSubmit)="atualizarLivro()">
+    <h1>ATUALIZAR LIVRO</h1>
+
+    <mat-form-field class="form">
+        <mat-label>Titulo</mat-label>
+        <input matInput [(ngModel)]="livro.titulo" [formControl]="titulo" name="titulo" placeholder="Harry Potter" type="text" maxlength="100">
+        <mat-error *ngIf="titulo.invalid">{{ getMessage() }}</mat-error>
+    </mat-form-field>
+
+    <mat-form-field class="form">
+        <mat-label>Autor</mat-label>
+        <input matInput [(ngModel)]="livro.nomeAutor" [formControl]="nomeAutor" name="nomeAutor" placeholder="J.K Rowling" type="text" maxlength="100">
+        <mat-error *ngIf="nomeAutor.invalid">{{ getMessage() }}</mat-error>
+    </mat-form-field>
+
+    <mat-form-field class="form">
+        <mat-label>Texto</mat-label>
+        <textarea matInput [(ngModel)]="livro.texto" [formControl]="texto" name="texto" placeholder="Descreva o livro" type="text" maxlength="2000000"></textarea>
+        <mat-error *ngIf="texto.invalid">{{ getMessage() }}</mat-error>
+    </mat-form-field>
+
+    <div class="buttons">
+        <button [disabled]="getMessage()" class="mat-elevation-z8" mat-stroked-button color="primary">ATUALIZAR</button>
+        <button  (click)="cancel()" class="mat-elevation-z8" mat-stroked-button color="warn">CANCELAR</button>
+    </div>
+</form>

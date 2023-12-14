@@ -31,6 +31,10 @@ export class LivroService {
     return this.http.get<Livro>(`${this.URL}/livros/${id}`)
   }
 
+  updateLivro(livro: Livro): Observable<Livro> {
+    return this.http.put<Livro>(`${this.URL}/livros/${livro.id}`, livro)
+  }
+
   mensagem(str: String): void {
     this._snack.open(`${str}`, 'OK', {
       horizontalPosition: 'end',

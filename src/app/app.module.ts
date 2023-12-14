@@ -13,6 +13,7 @@ import { CategoriaCreateModule } from './components/views/categoria/categoria-cr
 import { CategoriaDeleteModule } from './components/views/categoria/categoria-delete/categoria-delete.module';
 import { CategoriaUpdateModule } from './components/views/categoria/categoria-update/categoria-update.module';
 import { LivroReadAllModule } from './components/views/livro/livro-read-all/livro-read-all.module';
+import { LivroCreateModule } from './components/views/livro/livro-create/livro-create.module';
 
 @NgModule({
   declarations: [
@@ -31,7 +32,8 @@ import { LivroReadAllModule } from './components/views/livro/livro-read-all/livr
     CategoriaCreateModule,
     CategoriaDeleteModule,
     CategoriaUpdateModule,
-    LivroReadAllModule
+    LivroReadAllModule,
+    LivroCreateModule
   ],
   
   providers: [],
